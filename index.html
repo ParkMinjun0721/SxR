@@ -1,248 +1,92 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
-    <meta name="generator" content="Hugo 0.101.0">
-    <title>Album example · Bootstrap v4.6</title>
-
-    <link rel="canonical" href="https://getbootstrap.com/docs/4.6/examples/album/">
-
-    
-
-    <!-- Bootstrap core CSS -->
-<link href="./assets/dist/css/bootstrap.min.css" rel="stylesheet">
-
-
-
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>OX Quiz</title>
     <style>
-      .bd-placeholder-img {
-        font-size: 1.125rem;
-        text-anchor: middle;
-        -webkit-user-select: none;
-        -moz-user-select: none;
-        -ms-user-select: none;
-        user-select: none;
-      }
-
-      @media (min-width: 768px) {
-        .bd-placeholder-img-lg {
-          font-size: 3.5rem;
+        * {
+            box-sizing: border-box;
         }
-      }
+        body, html {
+            height: 100%;
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(120deg, #a8edea 0%, #fed6e3 100%);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+        .quiz-container {
+            background-color: #fff;
+            border-radius: 20px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            padding: 40px;
+            width: 100%;
+            min-width: 400px;
+            max-width: 800px;
+            height: 100%;
+            min-height: 300px;
+            max-height: 600px;
+        }
+        .rising-text {
+            font-size: 1.2em;
+            color: #0014ea;
+            margin-top: 0;
+        }
+        .quiz-header {
+            font-size: 2.5em;
+            margin: 0.5em 0;
+            position: relative;
+            text-shadow: 4px 4px 0px rgba(255, 255, 255, 0.8);
+        }
+        .sub-header {
+            font-size: 1.0em;
+            color: #333;
+            margin: 0;
+            font-weight: bold;
+        }
+        .start-button {
+            background-color: #2436f8;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            padding: 15px 30px;
+            font-size: 1.5em;
+            cursor: pointer;
+            box-shadow: 2px 2px 0px rgba(255, 255, 255, 0.8);
+            margin-top: 20px;
+            transition: background-color 0.3s, transform 0.1s;
+        }
+        .start-button:hover {
+            background-color: #3700B3;
+            transform: translateY(-3px);
+            box-shadow: 4px 4px 0px rgba(255, 255, 255, 0.8);
+        }
+        .start-button:active {
+            transform: translateY(-1px);
+            box-shadow: 2px 2px 0px rgba(255, 255, 255, 0.8);
+        }
+        .header_OX{
+            color: #f26bf4;
+            display: inline; 
+        }
+        .header_Quiz{
+            color: #9759ef;
+            display: inline; 
+        }
+        /* 추가적인 스타일링이 필요한 경우 이곳에 적용 */
     </style>
-<script>
-  function redirectToYtp() {
-    window.location.href = "ytp.html";
-  }
-</script>
-    
-    <!-- Custom styles for this template -->
-    <link href="./css/album.css" rel="stylesheet">
-  </head>
-  <body>
-    
-<header>
-  <div class="collapse bg-dark" id="navbarHeader">
-    <div class="container">
-      <div class="row">
-        <div class="col-sm-8 col-md-7 py-4">
-          <h4 class="text-white">About</h4>
-          <p class="text-muted">Hello. We are a company specializing in OTT services.<br>If you would like more information or have any inquiries,<br>please contact us at the email address provided on right side.</p>
-        </div>
-        <div class="col-sm-4 offset-md-1 py-4">
-          <h4 class="text-white">Contact</h4>
-          <ul class="list-unstyled">
-            <li><a href="#" class="text-white">Follow on Instagram</a></li>
-            <li><a href="#" class="text-white">Follow on Twitter</a></li>
-            <li><a href="#" class="text-white">Like on Facebook</a></li>
-            <li><a href="#" class="text-white">Email me</a></li>
-          </ul>
-        </div>
-      </div>
+</head>
+<body>
+    <div class="quiz-container">
+        <div class="rising-text">라이징 X 시선</div>
+        <div class="sub-header">장애인의 날</div>
+        <header class="quiz-header">
+            <div class="header_OX">OX</div><div class="header_Quiz"> 퀴즈</div>
+        </header>
+        <button class="start-button">Start</button>
     </div>
-  </div>
-  <div class="navbar navbar-dark bg-dark shadow-sm">
-    <div class="container d-flex justify-content-between">
-      <a href="./index.html" class="navbar-brand d-flex align-items-center">
-        <strong>AIOS</strong>
-      </a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarHeader" aria-controls="navbarHeader" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-    </div>
-  </div>
-</header>
-
-<main role="main">
-
-  <section class="jumbotron text-center">
-    <div class="container">
-      <h1>AIOS</h1>
-      <p class="lead text-muted">Hello! We offer you a paid OTT subscription service at a better price!<br>We have many services, and all you need to do is make a choice.<br>Dive into the waterfall of media with lots of content!</p>
-      <p></p>
-    </div>
-  </section>
-
-  <div class="album py-5 bg-light">
-    <div class="container">
-
-      <div class="row">
-        <div class="col-md-4">
-          <div class="card mb-4 shadow-sm">
-            <div>
-              <img src = "./image/YTP.png" width="100%" height="225">
-              <text x="50%" y="50%" dy=".3em" style="background-image: url(./image/YTP.png);"></text>
-            </div>
-            <div class="card-body">
-              <p class="card-text">Youtube Premium</p>
-              <div class="d-flex justify-content-between align-items-center">
-                <div class="btn-group" >
-                  <button type="button" class="btn btn-sm btn-outline-secondary" onclick= "location.href = './ytp.html'" style="width: 100%; height: auto;" >View</button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="card mb-4 shadow-sm">
-            <div>
-              <img src = "./image/Netflix.jpg" width="100%" height="225">
-            </div>
-            <div class="card-body">
-              <p class="card-text">Netflix</p>
-              <div class="d-flex justify-content-between align-items-center">
-                <div class="btn-group">
-                  <button type="button" class="btn btn-sm btn-outline-secondary" onclick= "location.href = './netflix.html'" >View</button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="card mb-4 shadow-sm">
-            <img src = "./image/Watcha.svg" width="100%" height="225">
-            <div class="card-body">
-              <p class="card-text">Watcha</p>
-              <div class="d-flex justify-content-between align-items-center">
-                <div class="btn-group">
-                  <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-md-4">
-          <div class="card mb-4 shadow-sm">
-            <img src = "./image/disneypluss.jpeg" width="100%" height="225">
-
-            <div class="card-body">
-              <p class="card-text">Disney+</p>
-              <div class="d-flex justify-content-between align-items-center">
-                <div class="btn-group">
-                  <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="card mb-4 shadow-sm">
-            <img src = "./image/Tving.jpg" width="100%" height="225">
-
-            <div class="card-body">
-              <p class="card-text">Tving</p>
-              <div class="d-flex justify-content-between align-items-center">
-                <div class="btn-group">
-                  <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="card mb-4 shadow-sm">
-            <img src = "./image/wavvee.png" width="100%" height="225">
-
-            <div class="card-body">
-              <p class="card-text">Wavve</p>
-              <div class="d-flex justify-content-between align-items-center">
-                <div class="btn-group">
-                  <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-md-4">
-          <div class="card mb-4 shadow-sm">
-            <img src = "./image/comingsoon.jpeg" width="100%" height="225">
-            
-            <div class="card-body">
-              <p class="card-text">Coming soon</p>
-              <div class="d-flex justify-content-between align-items-center">
-                <div class="btn-group">
-                  <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                </div>
-                <small class="text-muted"></small>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="card mb-4 shadow-sm">
-            <img src = "./image/comingsoon.jpeg" width="100%" height="225">
-
-            <div class="card-body">
-              <p class="card-text">Coming soon</p>
-              <div class="d-flex justify-content-between align-items-center">
-                <div class="btn-group">
-                  <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                </div>
-                <small class="text-muted"></small>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="card mb-4 shadow-sm">
-            <img src = "./image/comingsoon.jpeg" width="100%" height="225">
-
-            <div class="card-body">
-              <p class="card-text">Coming soon</p>
-              <div class="d-flex justify-content-between align-items-center">
-                <div class="btn-group">
-                  <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                </div>
-                <small class="text-muted"></small>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-</main>
-
-<footer class="text-muted">
-  <div class="container">
-    <p class="float-right">
-      <a href="#">Back to top</a>
-    </p>
-    <p>Album example is &copy; Bootstrap, but please download and customize it for yourself!</p>
-    <p>New to Bootstrap? <a href="/">Visit the homepage</a> or read our <a href="../getting-started/introduction/">getting started guide</a>.</p>
-  </div>
-</footer>
-
-
-    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-      <script>window.jQuery || document.write('<script src="../assets/js/vendor/jquery.slim.min.js"><\/script>')</script><script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
-
-      
-  </body>
+</body>
 </html>
