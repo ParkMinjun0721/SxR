@@ -1,5 +1,4 @@
-# SxR
-Seesun_X_Rising_OX_Quiz
+# Seesun_X_Rising_OX_Quiz
 ---
 ### 1차 업데이트. 여러가지 기능 구현.
 
