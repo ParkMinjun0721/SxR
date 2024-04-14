@@ -3,78 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <title>OX Quiz</title>
+    <link rel="stylesheet" href="style.css">
     <style>
         * {
             box-sizing: border-box;
-        }
-        body, html {
-            height: 100%;
-            margin: 0;
-            font-family: 'Arial', sans-serif;
-            background: linear-gradient(120deg, #a8edea 0%, #fed6e3 100%);
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-        }
-        .quiz-container {
-            background-color: #fff;
-            border-radius: 20px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            overflow: hidden;
-            padding: 40px;
-            width: 100%;
-            min-width: 400px;
-            max-width: 800px;
-            height: 100%;
-            min-height: 300px;
-            max-height: 600px;
-        }
-        .rising-text {
-            font-size: 1.2em;
-            color: #0014ea;
-            margin-top: 0;
-        }
-        .quiz-header {
-            font-size: 2.5em;
-            margin: 0.5em 0;
-            position: relative;
-            text-shadow: 4px 4px 0px rgba(255, 255, 255, 0.8);
-        }
-        .sub-header {
-            font-size: 1.0em;
-            color: #333;
-            margin: 0;
-            font-weight: bold;
-        }
-        .start-button {
-            background-color: #2436f8;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            padding: 15px 30px;
-            font-size: 1.5em;
-            cursor: pointer;
-            box-shadow: 2px 2px 0px rgba(255, 255, 255, 0.8);
-            margin-top: 20px;
-            transition: background-color 0.3s, transform 0.1s;
-        }
-        .start-button:hover {
-            background-color: #3700B3;
-            transform: translateY(-3px);
-            box-shadow: 4px 4px 0px rgba(255, 255, 255, 0.8);
-        }
-        .start-button:active {
-            transform: translateY(-1px);
-            box-shadow: 2px 2px 0px rgba(255, 255, 255, 0.8);
-        }
-        .header_OX{
-            color: #f26bf4;
-            display: inline; 
-        }
-        .header_Quiz{
-            color: #9759ef;
-            display: inline; 
         }
         /* 추가적인 스타일링이 필요한 경우 이곳에 적용 */
     </style>
@@ -87,6 +19,20 @@
             <div class="header_OX">OX</div><div class="header_Quiz"> 퀴즈</div>
         </header>
         <button class="start-button">Start</button>
+        <div class="quiz-question" style="display: none;">
+            <p id="question-text">여기에 문제가 표시됩니다.</p>
+            <div id="result-message" style="display: none;"></div>
+            <div id="explanation" style="display: none;"></div>
+            <button class="answer-button button" id="true">O</button>
+            <button class="answer-button button" id="false">X</button>
+            <button class="previous-question button" style="display: none;">이전 문제</button> <!-- 이전 문제 버튼 추가 -->
+            <button class="next-question button" style="display: none;">다음 문제</button>
+        </div>
+        <div class="quiz-results" style="display: none;">
+            <p id="final-result">결과가 여기에 표시됩니다.</p>
+        </div>        
+        <script src="script.js"></script>
+        
     </div>
 </body>
 </html>
