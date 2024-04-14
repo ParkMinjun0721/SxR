@@ -19,11 +19,75 @@ body, html {
     padding: 40px;
     width: 100%;
     min-width: 400px;
-    max-width: 800px;
+    max-width: 400px;
     height: 100%;
     min-height: 300px;
     max-height: 600px;
+
+    position: relative;
+    box-sizing: border-box; /* 패딩 포함하여 크기 계산 */
+    gap: 20px; /* 컨테이너 내 요소들 사이에 공간 추가 */
+    display: flex;
+    flex-direction: column; /* 자식 요소들을 세로로 정렬 */
+    align-items: center; /* 중앙 정렬 */
+    justify-content: space-between; /* 공간 분배 */
+    /* height: auto; 컨테이너 높이 자동 조절 */
 }
+.quiz-question {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%; /* 전체 높이 사용 */
+}
+
+#question-div {
+    flex: 0 0 auto; /* 높이의 10% 사용 */
+    height: fit-content;
+}
+
+#content-div {
+    position: absolute;
+    top: 60px;
+    width: 320px;
+    flex: 1 1 auto; /* 남은 공간을 모두 사용, 자동 크기 조절 */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 80%; /* 높이의 80% */
+}
+
+#move-div {
+    position: absolute; /* 절대 위치 설정 */
+    bottom: 20px; /* 컨테이너 하단에서 20px 위에 위치 */
+    width: 320px;
+    display: flex;
+    justify-content: center;
+    flex: 0 0 auto; /* 높이의 10% 사용 */
+    height: fit-content;
+    align-self: flex-end;
+}
+
+#question-text, #result-message, #final-result {
+    margin-bottom: 20px; /* 각 텍스트 요소 하단 여백 */
+}
+
+#explanation {
+    margin-top: 20px; /* 해설 위 여백 */
+    background: #e9ecef; /* 배경색 추가 */
+    padding: 10px; /* 패딩 추가 */
+    border-radius: 5px; /* 모서리 둥글게 */
+}
+
+.button-container {
+    margin: 20px 0; /* 버튼 컨테이너 상하 여백 증가 */
+}
+
+.start-button, .answer-button, .previous-question, .next-question {
+    font-weight: bold; /* 글꼴 굵게 */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2); /* 더 강조된 그림자 효과 */
+}
+
 .rising-text {
     font-size: 1.2em;
     color: #0014ea;
@@ -91,13 +155,19 @@ body, html {
 
 /* 정답, 오답 버튼 스타일 */
 .answer-button {
-    background-color: #f8f9fa;
-    color: #333;
+    font-size: 24px; /* 글자 크기를 키움 */
+    padding: 15px 30px; /* 패딩을 늘려 버튼 크기를 키움 */
+    border-radius: 10px; /* 모서리를 둥글게 */
+    margin: 5px; /* 버튼 사이의 간격 */
+    transition: background-color 0.3s, transform 0.2s; /* 부드러운 색상 및 크기 변화 효과 */
 }
 
 .answer-button:hover {
-    background-color: #17a2b8;
-    color: #fff;
+    background-color: #17a2b8; /* 호버 시 배경 색상 변경 */
+    color: #fff; /* 호버 시 글자 색상 변경 */
+}
+.answer-button:active {
+    transform: scale(0.95); /* 클릭 시 버튼을 약간 축소하여 클릭 효과를 줌 */
 }
 
 /* 이전, 다음 문제 버튼 스타일 */
@@ -112,4 +182,23 @@ body, html {
 
 .previous-question:active, .next-question:active {
     background-color: #004085;
+}
+.button-container {
+    display: flex;
+    justify-content: center; /* 중앙 정렬 */
+    align-items: center; /* 버티컬 중앙 정렬 */
+    margin: 10px 0; /* 상하 마진 추가 */
+}
+
+.answer-button, .previous-question, .next-question {
+    margin: 0 10px; /* 좌우 마진 추가하여 버튼 사이 간격 설정 */
+}
+
+#big-result {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #333; /* 기본 색상 */
+    z-index: 10; /* 다른 요소 위에 표시 */
 }
