@@ -20,13 +20,24 @@
         </header>
         <button class="start-button">Start</button>
         <div class="quiz-question" style="display: none;">
-            <p id="question-text">여기에 문제가 표시됩니다.</p>
-            <div id="result-message" style="display: none;"></div>
-            <div id="explanation" style="display: none;"></div>
-            <button class="answer-button button" id="true">O</button>
-            <button class="answer-button button" id="false">X</button>
-            <button class="previous-question button" style="display: none;">이전 문제</button> <!-- 이전 문제 버튼 추가 -->
-            <button class="next-question button" style="display: none;">다음 문제</button>
+            <div id="question-div">
+                <p id="question-text">여기에 문제가 표시됩니다.</p>
+            </div>
+            <div id="content-div">
+                <div id="result-message" style="display: none;"></div>
+                <div id="big-result" style="display: none; font-size: 96px; text-align: center;"></div>
+                <div id="explanation" style="display: none;"></div>
+                <!-- 정답/오답 버튼 컨테이너 -->
+                <div class="button-container">
+                    <button class="answer-button button" id="true">O</button>
+                    <button class="answer-button button" id="false">X</button>
+                </div>
+            </div>
+            <!-- 이전/다음 문제 버튼 컨테이너 -->
+            <div id="move-div" class="button-container">
+                <button class="previous-question button" style="display: none;">이전 문제</button>
+                <button class="next-question button" style="display: none;">다음 문제</button>
+            </div>
         </div>
         <div class="quiz-results" style="display: none;">
             <p id="final-result">결과가 여기에 표시됩니다.</p>
