@@ -327,6 +327,42 @@ body, html {
     cursor: pointer;
     transition: background-color 0.3s, transform 0.2s;
 }
+/* True 버튼 (O) 텍스트 색상 */
+#true {
+    color: #007bff; /* 하늘색 */
+    border: none;
+    cursor: pointer;
+    transition: color 0.3s, transform 0.2s;
+}
+
+#true:hover {
+    color: #0056b3; /* 호버 시 조금 더 진한 하늘색 */
+    background-color: #85b7ec;
+    transform: scale(1.05); /* 버튼이 약간 커지는 효과 */
+}
+
+#true:active {
+    transform: scale(0.95); /* 클릭할 때 버튼이 약간 작아지는 효과 */
+}
+
+/* False 버튼 (X) 텍스트 색상 */
+#false {
+    color: #dc2743; /* 빨간색 */
+    border: none;
+    cursor: pointer;
+    transition: color 0.3s, transform 0.2s;
+}
+
+#false:hover {
+    color: crimson; /* 호버 시 조금 더 진한 빨간색 */
+    background-color: #fc817c;
+    transform: scale(1.05); /* 버튼이 약간 커지는 효과 */
+}
+
+#false:active {
+    transform: scale(0.95); /* 클릭할 때 버튼이 약간 작아지는 효과 */
+}
+
 
 .button:hover {
     background-color: #555;
@@ -339,7 +375,7 @@ body, html {
 
 /* 정답, 오답 버튼 스타일 */
 .answer-button {
-    font-size: 24px; /* 글자 크기를 키움 */
+    font-size: 30px; /* 글자 크기를 키움 */
     padding: 15px 30px; /* 패딩을 늘려 버튼 크기를 키움 */
     border-radius: 10px; /* 모서리를 둥글게 */
     margin: 5px; /* 버튼 사이의 간격 */
@@ -347,7 +383,7 @@ body, html {
 }
 
 .answer-button:hover {
-    background-color: #17a2b8; /* 호버 시 배경 색상 변경 */
+    /* background-color: blanchedalmond; 호버 시 배경 색상 변경 */
     color: #fff; /* 호버 시 글자 색상 변경 */
 }
 .answer-button:active {
