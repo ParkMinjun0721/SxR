@@ -119,6 +119,23 @@ body, html {
     margin-bottom: 20px; /* 각 텍스트 요소 하단 여백 */
 }
 
+#result-message {
+    display: none;
+    font-size: 24px;
+    font-weight: bold;
+    color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
+    margin-top: 20px;
+    text-align: center;
+    width: 80%;
+    max-width: 600px;
+    transition: background-color 0.5s ease-in-out;
+}
+
+
+
 #explanation {
     margin-top: 20px; /* 해설 위 여백 */
     background: #e9ecef; /* 배경색 추가 */

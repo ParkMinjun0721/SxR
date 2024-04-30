@@ -145,10 +145,14 @@ document.addEventListener("DOMContentLoaded", function() {
         if (correct) {
             bigResult.textContent = "O"; // 정답일 때
             bigResult.style.color = "green"; // 정답인 경우 녹색으로 표시
+            resultMessage.textContent = "정답입니다!";
+        resultMessage.style.backgroundColor = "rgba(49, 130, 206, 0.8)";
             correctCount++; // 정답 수 증가
         } else {
             bigResult.textContent = "X"; // 오답일 때
             bigResult.style.color = "red"; // 오답인 경우 빨간색으로 표시
+            resultMessage.textContent = "오답입니다!";
+            resultMessage.style.backgroundColor = "rgba(229, 62, 62, 0.8)";
         }
     
         bigResult.style.display = "block"; // 결과 표시
@@ -156,7 +160,7 @@ document.addEventListener("DOMContentLoaded", function() {
             bigResult.style.display = "none";
         }, 2000); // 2초 후에 결과를 숨깁니다.
     
-        resultMessage.textContent = correct ? "정답입니다!" : "오답입니다!";
+        // resultMessage.textContent = correct ? "정답입니다!" : "오답입니다!";
         explanation.textContent = questions[currentQuestionIndex].explanation;
         resultMessage.style.display = "block";
         explanation.style.display = "block";
