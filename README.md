@@ -1,4 +1,8 @@
 # Seesun_X_Rising_OX_Quiz
+
+https://rxsoxquiz.netlify.app/
+
+
 ### 1차 업데이트. 여러가지 기능 구현.
 
 - start 버튼 누를 시 O/X 퀴즈 페이지로 넘어감.
